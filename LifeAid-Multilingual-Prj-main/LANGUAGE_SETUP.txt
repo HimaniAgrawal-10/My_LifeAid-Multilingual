@@ -1,0 +1,8 @@
+LifeAid website-wide language selection
+
+1. Install requirements from requirements.txt if provided, otherwise use the existing Flask requirements.
+2. Run: python app.py
+3. Open /login and choose Website Language before logging in.
+4. The choice is saved in this browser and applies to pages that include the shared language script.
+
+Important: this prototype uses the Google Translate website widget and requires an internet connection. Translation availability and behavior are controlled by Google and may change. It translates visible webpage text automatically; it does not translate database content reliably in every case, and it must not be relied on as the sole source for emergency/medical instructions. Review and professionally verify translated first-aid content before public deployment. The preference is stored in the browser, so it does not automatically follow a user to another device/browser.

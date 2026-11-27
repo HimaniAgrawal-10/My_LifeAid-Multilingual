@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>हार्ट अटैक आपातकाल</title>
+</head>
+<body>
+
+<h1>हार्ट अटैक आपातकाल</h1>
+
+<ol>
+    <li>तुरंत 108 या 112 पर कॉल करें।</li>
+    <li>रोगी को आरामदायक स्थिति में बैठाएं।</li>
+    <li>कसे हुए कपड़े ढीले करें।</li>
+    <li>यदि उपलब्ध हो तो डॉक्टर की सलाह अनुसार एस्पिरिन दें।</li>
+    <li>एम्बुलेंस आने तक निगरानी रखें।</li>
+</ol>
+
+
+<!-- LifeAid website-wide language support -->
+<div id="google_translate_element" style="display:none"></div>
+<style>
+  .goog-te-banner-frame, .skiptranslate { display: none !important; }
+  body { top: 0 !important; }
+  #google_translate_element { display: none !important; }
+</style>
+<script>
+(function () {
+  const supported = ['en','hi','ur','gu','mr','pa','bn','ta','te'];
+  const languageNames = {en:'English', hi:'Hindi', ur:'Urdu', gu:'Gujarati', mr:'Marathi', pa:'Punjabi', bn:'Bengali', ta:'Tamil', te:'Telugu'};
+  function getSavedLanguage() {
+    try { return localStorage.getItem('lifeaid_language') || 'en'; } catch (e) { return 'en'; }
+  }
+  function applyLanguage() {
+    const lang = getSavedLanguage();
+    const combo = document.querySelector('.goog-te-combo');
+    if (combo && supported.includes(lang) && combo.value !== lang) {
+      combo.value = lang;
+      combo.dispatchEvent(new Event('change'));
+    }
+    const picker = document.getElementById('preferred_language');
+    if (picker) picker.value = lang;
+  }
+  window.googleTranslateElementInit = function () {
+    new google.translate.TranslateElement({pageLanguage:'en', includedLanguages:'en,hi,ur,gu,mr,pa,bn,ta,te', autoDisplay:false}, 'google_translate_element');
+    let tries = 0;
+    const timer = setInterval(function () {
+      applyLanguage();
+      tries++;
+      if (document.querySelector('.goog-te-combo') || tries > 30) clearInterval(timer);
+    }, 300);
+  };
+  document.addEventListener('DOMContentLoaded', function () {
+    const picker = document.getElementById('preferred_language');
+    if (picker) {
+      picker.value = getSavedLanguage();
+      picker.addEventListener('change', function () {
+        try { localStorage.setItem('lifeaid_language', picker.value); } catch (e) {}
+        applyLanguage();
+      });
+      const form = picker.closest('form');
+      if (form) form.addEventListener('submit', function () {
+        try { localStorage.setItem('lifeaid_language', picker.value); } catch (e) {}
+      });
+    }
+    applyLanguage();
+  });
+  const script = document.createElement('script');
+  script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  script.async = true;
+  document.head.appendChild(script);
+})();
+</script>
+
+</body>
+</html>

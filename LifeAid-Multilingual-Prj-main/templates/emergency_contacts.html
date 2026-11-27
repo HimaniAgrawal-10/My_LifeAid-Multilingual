@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emergency SOS | LifeAid</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    :root { --navy:#102a43; --blue:#1261a0; --red:#d62839; --soft:#f3f7fb; }
+    body { background:var(--soft); color:#243447; font-family:Arial,sans-serif; }
+    .sos-hero { background:linear-gradient(120deg,#8f1024,#e63946 58%,#ff7b54); color:white; border-radius:24px; padding:32px; box-shadow:0 12px 30px #7f1d1d22; }
+    .sos-hero h1 { font-weight:800; letter-spacing:.2px; }
+    .call-card { border:0; border-radius:18px; height:100%; box-shadow:0 7px 22px #102a4310; transition:transform .18s ease; }
+    .call-card:hover { transform:translateY(-3px); }
+    .call-icon { width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:1.5rem;background:#fff0f1;color:var(--red); }
+    .call-number { font-size:1.65rem;font-weight:800;letter-spacing:1px;color:var(--navy); }
+    .call-btn { border-radius:12px;font-weight:700; }
+    .section-title { font-weight:800;color:var(--navy); }
+    .note { background:#fff8e6;border:1px solid #ffe3a3;border-radius:14px;padding:14px 16px; }
+    .small-muted { color:#64748b;font-size:.92rem; }
+    footer { color:#64748b; }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-dark" style="background:#102a43">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/dashboard"><i class="bi bi-heart-pulse-fill me-2"></i>LifeAid</a>
+    <a class="btn btn-outline-light btn-sm" href="/dashboard"><i class="bi bi-arrow-left me-1"></i>Dashboard</a>
+  </div>
+</nav>
+
+<main class="container py-4 py-lg-5">
+  <section class="sos-hero mb-4">
+    <div class="row align-items-center g-3">
+      <div class="col-lg-8">
+        <span class="badge bg-light text-danger mb-3 px-3 py-2">24×7 EMERGENCY SUPPORT INFORMATION</span>
+        <h1><i class="bi bi-exclamation-triangle-fill me-2"></i>Emergency SOS</h1>
+        <p class="lead mb-2">In an emergency, stay calm. Choose the service you need and tap the call button.</p>
+        <p class="mb-0">If there is immediate danger or you are unsure which service to contact, call <strong>112</strong> — India's unified emergency number.</p>
+      </div>
+      <div class="col-lg-4 text-lg-end">
+        <a class="btn btn-light btn-lg text-danger fw-bold call-btn px-4 py-3" href="tel:112">
+          <i class="bi bi-telephone-fill me-2"></i>Call 112 Now
+        </a>
+        <div class="small mt-2 text-white-50">Your phone's dialler will open.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="note mb-4">
+    <strong><i class="bi bi-info-circle-fill me-2"></i>Important:</strong>
+    LifeAid does not dispatch an ambulance or automatically notify authorities. These buttons open your phone dialler; confirm the call. Emergency number availability can vary by state and service.
+  </div>
+
+  <h2 class="section-title h4 mb-3">Quick Emergency Calls</h2>
+  <div class="row g-3 mb-5">
+    <div class="col-md-6 col-xl-4">
+      <div class="card call-card p-4">
+        <div class="d-flex align-items-center gap-3 mb-3"><div class="call-icon"><i class="bi bi-truck-front-fill"></i></div><div><h3 class="h5 mb-1">Ambulance / Medical Emergency</h3><span class="small-muted">Request medical transport or emergency medical help</span></div></div>
+        <div class="call-number">108 / 102</div>
+        <p class="small-muted">Ambulance numbers and availability may differ across states. You can also call 112 for an emergency.</p>
+        <a class="btn btn-danger call-btn mt-auto" href="tel:108"><i class="bi bi-telephone-fill me-2"></i>Call 108</a>
+        <a class="btn btn-outline-danger call-btn mt-2" href="tel:102">Call 102</a>
+      </div>
+    </div>
+    <div class="col-md-6 col-xl-4">
+      <div class="card call-card p-4">
+        <div class="d-flex align-items-center gap-3 mb-3"><div class="call-icon"><i class="bi bi-shield-fill-exclamation"></i></div><div><h3 class="h5 mb-1">National Emergency</h3><span class="small-muted">Police, fire, ambulance and other urgent help</span></div></div>
+        <div class="call-number">112</div>
+        <p class="small-muted">Pan-India unified emergency response number for urgent assistance.</p>
+        <a class="btn btn-danger call-btn mt-auto" href="tel:112"><i class="bi bi-telephone-fill me-2"></i>Call 112</a>
+      </div>
+    </div>
+    <div class="col-md-6 col-xl-4">
+      <div class="card call-card p-4">
+        <div class="d-flex align-items-center gap-3 mb-3"><div class="call-icon"><i class="bi bi-fire"></i></div><div><h3 class="h5 mb-1">Fire Service</h3><span class="small-muted">Fire, rescue and related emergencies</span></div></div>
+        <div class="call-number">101</div>
+        <p class="small-muted">For fire emergencies. If you cannot connect, call 112.</p>
+        <a class="btn btn-danger call-btn mt-auto" href="tel:101"><i class="bi bi-telephone-fill me-2"></i>Call 101</a>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title h4 mb-3">Important National Helplines</h2>
+  <div class="row g-3 mb-4">
+    <div class="col-sm-6 col-lg-4"><div class="card call-card p-3"><div class="fw-bold"><i class="bi bi-gender-female text-danger me-2"></i>Women Helpline</div><div class="call-number">181</div><p class="small-muted mb-2">Support for women in distress; 24-hour service information from the Ministry of Women and Child Development.</p><a class="btn btn-outline-primary call-btn" href="tel:181">Call 181</a></div></div>
+    <div class="col-sm-6 col-lg-4"><div class="card call-card p-3"><div class="fw-bold"><i class="bi bi-person-hearts text-danger me-2"></i>Women Police Helpline</div><div class="call-number">1091</div><p class="small-muted mb-2">Women’s safety and police assistance. For immediate danger, call 112.</p><a class="btn btn-outline-primary call-btn" href="tel:1091">Call 1091</a></div></div>
+    <div class="col-sm-6 col-lg-4"><div class="card call-card p-3"><div class="fw-bold"><i class="bi bi-balloon-heart text-danger me-2"></i>Child Helpline</div><div class="call-number">1098</div><p class="small-muted mb-2">Help for children in need of care and protection.</p><a class="btn btn-outline-primary call-btn" href="tel:1098">Call 1098</a></div></div>
+    <div class="col-sm-6 col-lg-4"><div class="card call-card p-3"><div class="fw-bold"><i class="bi bi-laptop text-danger me-2"></i>Cyber Crime / Financial Fraud</div><div class="call-number">1930</div><p class="small-muted mb-2">Report cyber-enabled financial fraud promptly.</p><a class="btn btn-outline-primary call-btn" href="tel:1930">Call 1930</a></div></div>
+    <div class="col-sm-6 col-lg-4"><div class="card call-card p-3"><div class="fw-bold"><i class="bi bi-cloud-lightning-rain text-danger me-2"></i>Disaster Management</div><div class="call-number">1070</div><p class="small-muted mb-2">Relief Commissioner / natural calamity assistance. State arrangements may vary.</p><a class="btn btn-outline-primary call-btn" href="tel:1070">Call 1070</a></div></div>
+    <div class="col-sm-6 col-lg-4"><div class="card call-card p-3"><div class="fw-bold"><i class="bi bi-car-front-fill text-danger me-2"></i>Road Accident Helpline</div><div class="call-number">1073</div><p class="small-muted mb-2">Road accident assistance information. For immediate emergency response, call 112.</p><a class="btn btn-outline-primary call-btn" href="tel:1073">Call 1073</a></div></div>
+  </div>
+
+  <h2 class="section-title h4 mb-3">Personal Emergency Contacts</h2>
+  <div class="card call-card p-4 mb-4">
+    <div class="d-flex align-items-start gap-3">
+      <div class="call-icon"><i class="bi bi-people-fill"></i></div>
+      <div class="flex-grow-1">
+        <h3 class="h5">Keep trusted contacts ready</h3>
+        <p class="small-muted mb-2">Save family members, a trusted friend or caregiver in your phone contacts. LifeAid currently provides this guidance; it does not store or automatically call personal contacts.</p>
+        <a class="btn btn-primary call-btn" href="tel:112"><i class="bi bi-telephone me-2"></i>Call emergency service 112</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>When calling for help:</strong>
+    <ul class="mb-0 mt-2">
+      <li>Clearly tell the operator what happened and where help is needed.</li>
+      <li>Share a nearby landmark and your callback number.</li>
+      <li>Follow the operator's instructions and do not hang up until advised.</li>
+      <li>Do not delay an emergency call while searching this website.</li>
+    </ul>
+  </div>
+
+  <p class="small-muted mt-4">Helpline information is provided for India. Please verify local service availability. In immediate danger, call 112.</p>
+  <div class="text-center mt-4"><a href="/dashboard" class="btn btn-dark call-btn px-4"><i class="bi bi-house-door me-2"></i>Back to Dashboard</a></div>
+</main>
+
+<footer class="text-center py-4">© 2026 LifeAid | Developed by Himani Agrawal</footer>
+
+<div id="google_translate_element" style="display:none"></div>
+<style>.goog-te-banner-frame,.skiptranslate{display:none!important}body{top:0!important}#google_translate_element{display:none!important}</style>
+<script>
+(function () {
+  const supported = ['en','hi','ur','gu','mr','pa','bn','ta','te'];
+  function getSavedLanguage(){try{return localStorage.getItem('lifeaid_language')||'en'}catch(e){return 'en'}}
+  function applyLanguage(){const lang=getSavedLanguage();const combo=document.querySelector('.goog-te-combo');if(combo&&supported.includes(lang)&&combo.value!==lang){combo.value=lang;combo.dispatchEvent(new Event('change'))}}
+  window.googleTranslateElementInit=function(){new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'en,hi,ur,gu,mr,pa,bn,ta,te',autoDisplay:false},'google_translate_element');let tries=0;const timer=setInterval(function(){applyLanguage();tries++;if(document.querySelector('.goog-te-combo')||tries>30)clearInterval(timer)},300)};
+  const script=document.createElement('script');script.src='https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';script.async=true;document.head.appendChild(script);
+})();
+</script>
+</body>
+</html>
